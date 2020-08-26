@@ -12,7 +12,7 @@
 </style>
 </head>
 <body>
-<%@include file="menu.jsp" %>
+<%@include file="menu.jsp"%>
 <h3>회원 전체조회</h3>
 <ul class="search">
 	<li>메일수신여부</li>

@@ -9,6 +9,7 @@
 <body>
 <input id ="txtFruit" >
 <button type = "button" id ="btnAdd" onclick="addFruit()">추가</button>
+<button type = "button" id ="btnDelete" onclick="deleteFruit()">삭제</button>
 <select id = "listFruit" size="10"></select>
 <script>
   													//https://www.w3schools.com/jsref/met_select_remove.asp 삭제도 만들기 
@@ -22,6 +23,10 @@ function addFruit() {
 	listFruit.add(option);
 	//입력필드 초기화
 	txtFruit.value = "";
+}
+function deleteFruit() {
+	var option = document.getElementById("listFruit");
+	option.remove(option.selectedIndex);
 }
 </script>
 </body>
