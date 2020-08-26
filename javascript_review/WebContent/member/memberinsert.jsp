@@ -40,7 +40,7 @@ function inputCheck(){
 </script>
 </head>
 <body>
-<%@include file="menu.jsp" %>
+<%@include file="../menu.jsp" %>
 <h3 class ="page_title">회원등록</h3>
 <form method="post" name="frm" 
 	  id="frm" action="memberInsertProc.jsp"
