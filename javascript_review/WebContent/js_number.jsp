@@ -8,6 +8,7 @@
 <script>
 /* 	num1.value=100;
 	num2.value=200; */
+	
 </script>
 </head>
 <body>
@@ -17,7 +18,9 @@
 	<button type="button" id="btnResult" onclick="checkResult()">결과확인</button>
 	<button type="button" id="btnInit" onclick="init()">초기화</button>
 	<div id="divResult">    </div>
+	
 <script>
+
 var ocnt = 0; //맞은수
 var xcnt = 0; //틀린수
 //두수의 합이 result와 같으면 맞은수 증가 다르면 틀린수 증가
