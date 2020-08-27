@@ -30,36 +30,40 @@ var xcnt = 0; //틀린수
 //두수의 합이 result와 같으면 맞은수 증가 다르면 틀린수 증가
 //총 게임횟수 5회가 되면 버튼 비활성화하고 결과 출력
 
+
 function checkResult(){
 	//지역변수
 	// 두 수의 합이 result와 같으면 "맞다" 아니면 "틀림" 출력
 	/* var sum = parseInt(num1.value)+parseInt(num2.value); */
 
-	if(parseInt(num1.val)+parseInt(num2.val) == parseInt(result.val)){
+	if(parseInt($("#num1").val())+parseInt($("#num2").val()) == parseInt($("#result").val())){
 		//맞은 수 카운트
 		/* alert("맞다"); */
 		ocnt++;
-		divResult.HTML += "맞다<br>"
+		//왜 출력이 안되노
+		//$("#divResult").HTML($(#"divResult") + "맞다<br>")
+		$("#divResult").HTML += "맞다<br>"
 	}else{
 		//틀린 수 카운트
 		/* window.alert("틀림"); */
 		xcnt++;
-		divResult.HTML += "틀림<br>"
+		$("#divResult").HTML += "틀림<br>"
 	}
+	console.log(ocnt,xcnt);
 	// 틀린수 + 맞은수 == 5회이면 맞은수 *20 결과를 출력하고 버튼 비활성화.
 	if(ocnt + xcnt == 5) {
 		alert("결과는" + (ocnt * 20) + "점입니다.");
 		//btnResult.disabled = "disabled"; //attr함수
-		$("btnResult").attr("disabled","disabled");
+		$("#btnResult").attr("disabled","disabled");
 	} else {
 		init();
-		result.val = "";
+		$("#result").val("");
 	}
 }
 //함수 선언
 function init(){
-	num1.val(Math.floor(Math.random() * 10+1));
-	num2.val(Math.floor(Math.random() * 10+1));
+	$("#num1").val(Math.floor(Math.random() * 10+1));
+	$("#num2").val(Math.floor(Math.random() * 10+1));
 }
 //함수 호출(실행)
 init();

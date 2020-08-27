@@ -5,9 +5,10 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<script>
+<script src="https://code.jquery.com/jquery-3.5.1.js" 
+integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
+crossorigin="anonymous">
 	//tbody의 2열의 국어 성적의 합계를 계산하여 span 태그에 출력
-	
 </script>
 </head>
 <body>
@@ -38,5 +39,13 @@
 	</tbody>
 </table>
 <div>국어합계: <span id="kor"></span></div>
+<script>
+		//td:even은 안되나?
+	$("span#kor").html(
+				   parseInt($("td:nth-child(2)").eq(1).html())+
+				   parseInt($("td:nth-child(2)").eq(2).html())+
+				   parseInt($("td:nth-child(2)").eq(3).html())
+			);
+</script>
 </body>
 </html>
