@@ -8,6 +8,7 @@
 </head>
 <body>
 <h3>게시판</h3>
+<%@include file="../menu.jsp" %>
 <table id="board" border="1">
 	<thead>
 		<tr>

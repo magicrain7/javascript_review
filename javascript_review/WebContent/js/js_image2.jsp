@@ -9,14 +9,16 @@
 </head>
 <body>
 <script>
-var imgArr = [  {src:"./images/Chrysanthemum.jpg", alt:"국화",  width:100},
-				{src:"./images/Desert.jpg",        alt:"사막",  width:110},
-				{src:"./images/Hydrangeas.jpg",    alt:"수국",  width:120},
-				{src:"./images/Jellyfish.jpg",     alt:"해파리", width:130}
+var imgArr = [  {src:"../images/Chrysanthemum.jpg", alt:"국화",  width:100},
+				{src:"../images/Desert.jpg",        alt:"사막",  width:110},
+				{src:"../images/Hydrangeas.jpg",    alt:"수국",  width:120},
+				{src:"../images/Jellyfish.jpg",     alt:"해파리", width:130}
 			 ];
 for(var i=0; i<imgArr.length; i++){
 	var img = document.createElement("img");
-	img.src = imgArr[i];
+	img.src = imgArr[i].src;
+	img.alt = imgArr[i].alt;
+	img.style.width = imgArr[i].width+"px";
 	document.body.append(img);
 }
 </script>

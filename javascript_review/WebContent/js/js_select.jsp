@@ -12,7 +12,15 @@
 <button type = "button" id ="btnDelete" onclick="deleteFruit()">삭제</button>
 <select id = "listFruit" size="10"></select>
 <script>
-  													//https://www.w3schools.com/jsref/met_select_remove.asp 삭제도 만들기 
+//텍스트필드의 값을 selelct에 추가
+txtFruit.addEventListener("keypress",function(){
+	if(event.keycode == 13) {
+		addFruit();	
+	}
+});
+
+
+	//https://www.w3schools.com/jsref/met_select_remove.asp 삭제도 만들기 
 function addFruit() {
 	//텍스트필드의 값을 select에 추가
 	//var i = document.getElementById("listFruit");
@@ -25,8 +33,8 @@ function addFruit() {
 	txtFruit.value = "";
 }
 function deleteFruit() {
-	var option = document.getElementById("listFruit");
-	option.remove(option.selectedIndex);
+	var select = document.getElementById("listFruit");
+	select.remove(select.selectedIndex);
 }
 </script>
 </body>

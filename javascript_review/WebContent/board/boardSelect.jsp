@@ -8,6 +8,7 @@
 </head>
 <body>
 <h3>내정보조회</h3>
+<%@include file="../menu.jsp" %>
 <div><span class="label">no</span><span></span></div>
 <div><span class="label">작성자</span><span>lee</span></div>
 <div><span class="label">제목</span><span>java</span></div>

@@ -8,6 +8,8 @@
 </head>
 
 <body>
+<%@include file="../menu.jsp" %>
+<form>
 	<div>
 		<label for="no">no</label>
 			<input type="text" id="no" name="no">
@@ -34,7 +36,8 @@
 	
 	<div>
 		<label for="filename">첨부파일</label>
-		
+			<input type = "file" id = "filename" name = "filename"> 
 	</div>
+</form>
 </body>
 </html>
