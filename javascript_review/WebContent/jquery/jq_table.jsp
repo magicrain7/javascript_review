@@ -41,10 +41,9 @@ crossorigin="anonymous">
 <div>국어합계: <span id="kor"></span></div>
 <script>
 		//td:even은 안되나?
-	$("span#kor").html(
-				   parseInt($("td:nth-child(2)").eq(1).html())+
-				   parseInt($("td:nth-child(2)").eq(2).html())+
-				   parseInt($("td:nth-child(2)").eq(3).html())
+	$("#kor").html( parseInt($("td:nth-child(2)").eq(1).html())+
+				   		parseInt($("td:nth-child(2)").eq(2).html())+
+				   		parseInt($("td:nth-child(2)").eq(3).html())
 			);
 </script>
 </body>

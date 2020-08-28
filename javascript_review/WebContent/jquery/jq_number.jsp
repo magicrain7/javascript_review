@@ -18,10 +18,7 @@
 	<button type="button" id="btnResult" >결과확인</button>
 	<button type="button" id="btnInit">초기화</button>
 	<div id="divResult">    </div>
-<script src="https://code.jquery.com/jquery-3.5.1.js" 
-integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
-crossorigin="anonymous">
-</script>	
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>	
 <script>
 $("#btnResult").on("click",checkResult);
 $("#btnInit").on("click",checkResult);
@@ -42,12 +39,13 @@ function checkResult(){
 		ocnt++;
 		//왜 출력이 안되노
 		//$("#divResult").HTML($(#"divResult") + "맞다<br>")
-		$("#divResult").HTML += "맞다<br>"
+		//divResult.innerHTML += "틀림<br>"
+		$("#divResult").append("맞다<br>")
 	}else{
 		//틀린 수 카운트
 		/* window.alert("틀림"); */
 		xcnt++;
-		$("#divResult").HTML += "틀림<br>"
+		$("#divResult").append("틀림<br>")
 	}
 	console.log(ocnt,xcnt);
 	// 틀린수 + 맞은수 == 5회이면 맞은수 *20 결과를 출력하고 버튼 비활성화.

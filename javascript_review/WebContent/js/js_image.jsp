@@ -21,13 +21,21 @@ for(var i=0; i<imgArr.length; i++) {
 	var img = document.createElement("img");  //태그 생성
 	img.src = imgArr[i];					  //src 속성변경
 	document.body.appendChild(img);		      //body에  추가
-	img.addEventListener("mouseover", function(){			 //이벤트 지정
+/* 	img.addEventListener("mouseover", function(){			 //이벤트 지정
 		this.style.width = "200px";			  
 	});
 	img.addEventListener("mouseout", function() {
 		this.style.width = "100px";
-	});
+	}); */
 }
+$('.bxslider').bxSlider({
+	  auto: true,
+	  autoControls: true,
+	  stopAutoOnClick: true,
+	  pager: true,
+	  slideWidth: 600
+	});
 </script>
+
 </body>
 </html>
